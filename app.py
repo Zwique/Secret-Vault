@@ -14,8 +14,10 @@ def index():
 # Route for robots.txt
 @app.route('/robots.txt')
 def robots():
-    return "VALID_USERNAME = "admin"
-VALID_PASSWORD = "supersecurepassword123""
+    return '''User-agent: *
+Disallow: /vault
+# Debug Info: user=admin, pass=supersecurepassword123
+'''
 
 # Route for the vault (hidden flag)
 @app.route('/vault')
@@ -33,7 +35,10 @@ def vault():
 @app.route('/admin')
 def admin():
     return "Nothing to see here. Move along."
-
+    
+@app.route('/debug')
+def debug():
+    return f"DEBUG INFO: USER={VALID_USERNAME} PASSWORD={VALID_PASSWORD}"
 # Run the app
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=4444)
