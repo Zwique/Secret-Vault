@@ -14,7 +14,8 @@ def index():
 # Route for robots.txt
 @app.route('/robots.txt')
 def robots():
-    return render_template("robots.txt")
+    return "VALID_USERNAME = "admin"
+VALID_PASSWORD = "supersecurepassword123""
 
 # Route for the vault (hidden flag)
 @app.route('/vault')
