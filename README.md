@@ -2,7 +2,7 @@
 
 1. `robots.txt` is a common default directory, which can be even found by just fuzzing.
 2. https://secret-vault-production.up.railway.app/robots.txt
-3. Credentials: User-agent: * Disallow: /vault # Debug Info: user=admin, pass=supersecurepassword123
+3. Credentials: User-agent: * Allow: /vault # Debug Info: user=admin, pass=supersecurepassword123
 
 This challenge asks you to access the `/vault` directory using admin's username and password.
 
