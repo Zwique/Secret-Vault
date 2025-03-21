@@ -8,8 +8,9 @@ This challenge asks you to access the `/vault` directory using admin's username 
 
 We can simply use `curl` command.
 
-## Curl Command
 
+## Curl Command
+```
 ┌──(myenv)─(zwique㉿kali)-[~/Downloads]
 └─$ curl -h                                                                   
 Usage: curl [options...] <url>
@@ -32,8 +33,12 @@ auth, connection, curl, deprecated, dns, file, ftp, global, http, imap, ldap, ou
 scp, sftp, smtp, ssh, telnet, tftp, timeout, tls, upload, verbose.
 Use "--help all" to list all options
 Use "--help [option]" to view documentation for a given option
+```
 
 ### Flag:
+
+```
 ┌──(myenv)─(zwique㉿kali)-[~/Downloads]
 └─$ curl -u admin:supersecurepassword123 https://secret-vault-production.up.railway.app/vault
 uacCTF{h1dden_vAulT_bypAssEd}
+```
