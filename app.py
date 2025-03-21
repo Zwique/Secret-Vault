@@ -14,9 +14,9 @@ def index():
 # Route for robots.txt
 @app.route('/robots.txt')
 def robots():
-    return '''User-agent: *
-Disallow: /vault
-# Debug Info: user=admin, pass=supersecurepassword123
+    return '''User-agent: * \n
+Allow: /vault \n
+# Debug Info: user=admin, pass=supersecurepassword123 \n
 '''
 
 # Route for the vault (hidden flag)
